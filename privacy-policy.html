@@ -1,0 +1,517 @@
+<title>Grabbit Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+  :root {
+    --ground: #F7F5F1;
+    --panel: #EEEAE3;
+    --panel-line: #E0DACF;
+    --ink: #211C1A;
+    --ink-soft: #6E6660;
+    --accent: #B02F2A;
+    --accent-soft: #9A4A34;
+    --rule: #DCD5C9;
+    --shadow: 0 1px 2px rgba(33, 28, 26, 0.04), 0 8px 28px rgba(33, 28, 26, 0.06);
+    --measure: 68ch;
+
+    --display: "Fraunces", Georgia, "Times New Roman", serif;
+    --body: "Public Sans", -apple-system, "Segoe UI", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #1A1614;
+      --panel: #241E1B;
+      --panel-line: #352C28;
+      --ink: #EDE7E0;
+      --ink-soft: #A79B92;
+      --accent: #E06B57;
+      --accent-soft: #E8917E;
+      --rule: #352C28;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #1A1614;
+    --panel: #241E1B;
+    --panel-line: #352C28;
+    --ink: #EDE7E0;
+    --ink-soft: #A79B92;
+    --accent: #E06B57;
+    --accent-soft: #E8917E;
+    --rule: #352C28;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: clamp(2rem, 5vw, 5rem) clamp(1.25rem, 5vw, 2.5rem) 6rem;
+  }
+
+  /* ─── Masthead ─────────────────────────────────────────── */
+  .masthead {
+    border-top: 4px solid var(--accent);
+    padding-top: 2rem;
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 1.1rem;
+  }
+
+  h1 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(2.4rem, 7vw, 3.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    margin: 0 0 1rem;
+  }
+
+  .lede {
+    font-size: 1.075rem;
+    color: var(--ink-soft);
+    max-width: var(--measure);
+    margin: 0 0 1.75rem;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.75rem;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+  }
+  .meta b { color: var(--ink); font-weight: 500; }
+
+  /* ─── Summary panel ────────────────────────────────────── */
+  .summary {
+    margin: 2.75rem 0 0;
+    background: var(--panel);
+    border: 1px solid var(--panel-line);
+    border-radius: 14px;
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+    box-shadow: var(--shadow);
+  }
+  .summary h2 {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 1.35rem;
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1.35rem 2rem;
+  }
+  .sum-item { display: flex; gap: 0.85rem; align-items: flex-start; }
+  .sum-item .dot {
+    flex: none;
+    width: 0.7rem; height: 0.7rem;
+    margin-top: 0.5rem;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .sum-item .dot.warn { background: var(--accent-soft); }
+  .sum-item p { margin: 0; font-size: 0.94rem; line-height: 1.5; }
+  .sum-item b { display: block; font-weight: 600; margin-bottom: 0.1rem; }
+  .sum-item span { color: var(--ink-soft); }
+
+  /* ─── Table of contents ────────────────────────────────── */
+  nav.toc {
+    margin: 2.75rem 0 0;
+    columns: 2;
+    column-gap: 2.5rem;
+  }
+  nav.toc ol { margin: 0; padding: 0; list-style: none; counter-reset: toc; }
+  nav.toc li {
+    counter-increment: toc;
+    break-inside: avoid;
+    margin-bottom: 0.55rem;
+  }
+  nav.toc a {
+    display: grid;
+    grid-template-columns: 1.9rem 1fr;
+    gap: 0.4rem;
+    align-items: baseline;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.92rem;
+    padding: 0.15rem 0;
+  }
+  nav.toc a::before {
+    content: counter(toc, decimal-leading-zero);
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    color: var(--accent);
+  }
+  nav.toc a:hover span { text-decoration: underline; text-underline-offset: 3px; }
+
+  @media (max-width: 520px) { nav.toc { columns: 1; } }
+
+  /* ─── Sections ─────────────────────────────────────────── */
+  main { counter-reset: sec; }
+
+  section {
+    padding-top: 3.25rem;
+    margin-top: 3.25rem;
+    border-top: 1px solid var(--rule);
+    scroll-margin-top: 1.5rem;
+  }
+  section:first-child { border-top: none; }
+
+  h2.sec {
+    counter-increment: sec;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(1.5rem, 3.6vw, 1.95rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0 0 1.1rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.9rem;
+    align-items: baseline;
+  }
+  h2.sec::before {
+    content: counter(sec, decimal-leading-zero);
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  section > *:not(h2.sec) { max-width: var(--measure); }
+
+  h3 {
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 1.02rem;
+    margin: 1.9rem 0 0.5rem;
+    color: var(--ink);
+  }
+
+  p { margin: 0 0 1rem; }
+
+  a { color: var(--accent-soft); text-underline-offset: 2px; }
+
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+  li { margin-bottom: 0.5rem; }
+  li::marker { color: var(--accent); }
+
+  strong { font-weight: 600; }
+
+  /* ─── Data table ───────────────────────────────────────── */
+  .table-scroll { overflow-x: auto; margin: 0 0 1rem; -webkit-overflow-scrolling: touch; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 460px;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; color: var(--ink-soft); font-size: 0.88rem; margin-bottom: 0.7rem; }
+  th, td {
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  thead th {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    border-bottom: 1.5px solid var(--rule);
+  }
+  tbody th { font-weight: 600; }
+  tbody tr:last-child th, tbody tr:last-child td { border-bottom: none; }
+
+  /* ─── Callout ──────────────────────────────────────────── */
+  .callout {
+    background: var(--panel);
+    border: 1px solid var(--panel-line);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    padding: 1.25rem 1.4rem;
+    margin: 0 0 1rem;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout .tag {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .contact-card {
+    background: var(--panel);
+    border: 1px solid var(--panel-line);
+    border-radius: 14px;
+    padding: clamp(1.4rem, 4vw, 2rem);
+    box-shadow: var(--shadow);
+  }
+  .contact-card .who { font-family: var(--display); font-size: 1.35rem; font-weight: 600; margin: 0 0 0.3rem; }
+  .contact-card a { font-weight: 600; font-size: 1.05rem; }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 0.76rem;
+    color: var(--ink-soft);
+    max-width: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+  }
+
+  a:focus-visible, nav.toc a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { scroll-behavior: auto !important; }
+  }
+  html { scroll-behavior: smooth; }
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <p class="eyebrow">Privacy Policy</p>
+    <h1>Grabbit</h1>
+    <p class="lede">This policy explains what Grabbit collects, how that information is used, who it is shared with, and the choices you have. Please read it before playing.</p>
+    <div class="meta">
+      <span>Developer&nbsp;<b>Red Marble Studio</b></span>
+      <span>Package&nbsp;<b>com.Grabbit.RedMarbleStudio</b></span>
+      <span>Last updated&nbsp;<b>September 5, 2026</b></span>
+    </div>
+  </header>
+
+  <div class="summary">
+    <h2>At a glance</h2>
+    <div class="summary-grid">
+      <div class="sum-item">
+        <span class="dot"></span>
+        <p><b>No account, no sign-in</b><span>Grabbit has no login. We never ask for your name, email, phone number, or contacts.</span></p>
+      </div>
+      <div class="sum-item">
+        <span class="dot"></span>
+        <p><b>Progress stays on your device</b><span>Levels, coins, skins, and settings are saved locally on your phone.</span></p>
+      </div>
+      <div class="sum-item">
+        <span class="dot warn"></span>
+        <p><b>Anonymous gameplay analytics</b><span>We collect gameplay events tied to a random ID — not to you personally — to improve the game.</span></p>
+      </div>
+      <div class="sum-item">
+        <span class="dot warn"></span>
+        <p><b>Ads &amp; purchases via Google</b><span>Ads are served by Google AdMob; purchases run through Google Play Billing.</span></p>
+      </div>
+      <div class="sum-item">
+        <span class="dot"></span>
+        <p><b>Built for a general audience</b><span>Grabbit may be played by children, so we serve non-personalized ads only.</span></p>
+      </div>
+      <div class="sum-item">
+        <span class="dot"></span>
+        <p><b>You can request deletion</b><span>Email us any time to have collected analytics data removed.</span></p>
+      </div>
+    </div>
+  </div>
+
+  <nav class="toc" aria-label="Contents">
+    <ol>
+      <li><a href="#who"><span>Who we are</span></a></li>
+      <li><a href="#collect"><span>Information the game collects</span></a></li>
+      <li><a href="#third-party"><span>Information collected by third parties</span></a></li>
+      <li><a href="#use"><span>How we use information</span></a></li>
+      <li><a href="#share"><span>Whether data is shared</span></a></li>
+      <li><a href="#ads"><span>Advertising</span></a></li>
+      <li><a href="#billing"><span>Purchases &amp; Google Play Billing</span></a></li>
+      <li><a href="#analytics"><span>Analytics &amp; crash reporting</span></a></li>
+      <li><a href="#retention"><span>Data retention &amp; deletion</span></a></li>
+      <li><a href="#security"><span>Security</span></a></li>
+      <li><a href="#children"><span>Children's privacy</span></a></li>
+      <li><a href="#changes"><span>Changes to this policy</span></a></li>
+      <li><a href="#contact"><span>Contact us</span></a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section id="who">
+      <h2 class="sec">Who we are</h2>
+      <p>Grabbit ("the game", "we", "us", or "our") is a mobile game developed and published by <strong>Red Marble Studio</strong>. This privacy policy applies to the Grabbit application distributed through Google Play under the package name <strong>com.Grabbit.RedMarbleStudio</strong>.</p>
+      <p>By downloading or playing Grabbit, you agree to the practices described in this policy. If you do not agree, please do not use the game.</p>
+    </section>
+
+    <section id="collect">
+      <h2 class="sec">Information the game collects</h2>
+      <p>Grabbit does <strong>not</strong> require an account and does not ask you to provide any personal details such as your name, email address, phone number, or location. We do not access your contacts, photos, microphone, or camera.</p>
+
+      <h3>Stored on your device only</h3>
+      <p>Your game progress is saved locally on your device and is not transmitted to us. This includes completed levels and star ratings, your coin balance, purchased and equipped skins, unlocked achievements, and your sound, music, and haptics settings. This data is removed when you uninstall the game.</p>
+
+      <h3>Gameplay analytics we collect</h3>
+      <p>To understand how the game is played and to improve it, Grabbit records anonymous gameplay events and sends them to our own analytics server. This information is <strong>not</strong> linked to your real-world identity.</p>
+      <div class="table-scroll">
+        <table>
+          <caption>What the analytics data contains</caption>
+          <thead>
+            <tr><th scope="col">Category</th><th scope="col">Examples</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Gameplay events</th><td>Levels started, completed, and restarted; apples and coins collected; hazards hit; grabs made; achievements unlocked; screens visited</td></tr>
+            <tr><th scope="row">Economy events</th><td>In-game coin purchases, ad-reward views, and purchase attempts (in-game coins only — never payment details)</td></tr>
+            <tr><th scope="row">Random identifiers</th><td>A randomly generated device ID and session ID created by the app. These are not your hardware ID, advertising ID, or Google account.</td></tr>
+            <tr><th scope="row">Technical context</th><td>App version, operating system name (e.g. "Android"), and device language/locale</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The random device ID is generated by the app itself to distinguish one installation from another for analytics purposes. It contains no personal information and resets if you clear the app's data or reinstall.</p>
+    </section>
+
+    <section id="third-party">
+      <h2 class="sec">Information collected by third parties</h2>
+      <p>Grabbit uses services provided by Google to show ads and to process purchases. These services may collect information directly from your device, governed by Google's own privacy policies rather than this one.</p>
+      <ul>
+        <li><strong>Google AdMob</strong> (advertising) may collect device information and identifiers used to serve and measure ads and to limit ad frequency and fraud. Because Grabbit may be played by children, AdMob is configured to serve <strong>non-personalized ads only</strong>.</li>
+        <li><strong>Google Play Billing</strong> (in-app purchases) processes your payment. Payment information is handled entirely by Google and the Google Play Store — <strong>we never see or store your card or payment details</strong>.</li>
+      </ul>
+      <p>We encourage you to review Google's privacy policy at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a> to understand how Google handles data.</p>
+    </section>
+
+    <section id="use">
+      <h2 class="sec">How we use information</h2>
+      <p>We use the information described above only for the following purposes:</p>
+      <ul>
+        <li>To run the game and save your progress and settings on your device.</li>
+        <li>To understand which levels are difficult, where players drop off, and how features are used, so we can fix problems and improve the game.</li>
+        <li>To display advertising and to apply your "Remove Ads" purchase when active.</li>
+        <li>To process and restore in-app purchases through Google Play.</li>
+        <li>To diagnose stability issues and improve performance.</li>
+      </ul>
+      <p>We do <strong>not</strong> use your information to build advertising profiles about you, and we do not sell your information.</p>
+    </section>
+
+    <section id="share">
+      <h2 class="sec">Whether data is shared</h2>
+      <p>We do not sell, rent, or trade your information. Data is limited to the following:</p>
+      <ul>
+        <li><strong>Our analytics server.</strong> Anonymous gameplay analytics are transmitted to a server operated on our behalf (hosted on Cloudflare infrastructure) so we can review aggregate gameplay trends.</li>
+        <li><strong>Google.</strong> Ad-serving and purchase data are shared with Google as a necessary part of providing ads (AdMob) and processing payments (Google Play Billing).</li>
+        <li><strong>Legal requirements.</strong> We may disclose information if required to do so by law or valid legal process.</li>
+      </ul>
+      <p>Aside from these, we do not share collected data with any other third party.</p>
+    </section>
+
+    <section id="ads">
+      <h2 class="sec">Advertising</h2>
+      <p>Grabbit displays advertising through <strong>Google AdMob</strong>, including full-screen (interstitial) ads shown between levels and optional rewarded ads you can choose to watch for in-game discounts.</p>
+      <p>Because Grabbit is available to a general audience that may include children, we instruct AdMob to serve <strong>non-personalized ads only</strong> — ads that are not based on a profile of your past behavior. Ads may still use limited information such as general context and coarse location (e.g. country) as permitted for non-personalized advertising.</p>
+      <div class="callout">
+        <span class="tag">Removing ads</span>
+        <p>You can permanently remove ads by purchasing the <strong>"Remove Ads"</strong> option in the game's store. Once active, interstitial and rewarded ads are disabled.</p>
+      </div>
+    </section>
+
+    <section id="billing">
+      <h2 class="sec">Purchases &amp; Google Play Billing</h2>
+      <p>Grabbit offers optional one-time in-app purchases (for example, "Remove Ads" and the "Redline" cosmetic bundle). All purchases are processed through the <strong>Google Play Billing</strong> system.</p>
+      <p>When you make a purchase, your payment is handled by Google. We receive confirmation that a purchase was completed so we can unlock the corresponding content, but <strong>we do not receive or store your name, card number, or any payment information</strong>. Purchases can be restored through the game's "Restore Purchases" option, which queries your entitlements from Google Play.</p>
+      <p>Refunds and payment disputes are handled by Google Play in accordance with the <a href="https://play.google.com/intl/en_us/about/play-terms/" target="_blank" rel="noopener">Google Play Terms of Service</a>.</p>
+    </section>
+
+    <section id="analytics">
+      <h2 class="sec">Analytics &amp; crash reporting</h2>
+      <p>Analytics in Grabbit are provided by our own first-party system rather than a third-party analytics SDK. Gameplay events are buffered on your device, compressed, and periodically uploaded to our server over an encrypted connection while the game is running. Each upload is tagged with the randomly generated device ID, session ID, and app version described in Section&nbsp;02.</p>
+      <p>This data is used in aggregate to monitor game balance, detect problems, and guide improvements. It is not used to identify you and is not combined with any personal information.</p>
+    </section>
+
+    <section id="retention">
+      <h2 class="sec">Data retention &amp; deletion</h2>
+      <p><strong>On-device data.</strong> Your saved progress and settings remain on your device until you delete them or uninstall the game. Uninstalling removes all locally stored data, including the random device identifier.</p>
+      <p><strong>Analytics data.</strong> We retain anonymous analytics only as long as needed for the purposes described in this policy, after which it is deleted or further aggregated.</p>
+      <div class="callout">
+        <span class="tag">Your right to deletion</span>
+        <p>You may request deletion of analytics data associated with your installation at any time by emailing <a href="mailto:redmarblestudio@gmail.com">redmarblestudio@gmail.com</a>. Because the identifier is random, please include any details that can help us locate the relevant records. You can also stop all further analytics collection by uninstalling the game.</p>
+      </div>
+    </section>
+
+    <section id="security">
+      <h2 class="sec">Security</h2>
+      <p>We take reasonable measures to protect the information we handle. Analytics data is transmitted to our server over an encrypted HTTPS connection and stored on reputable cloud infrastructure. Payment and ad data are secured by Google's own systems.</p>
+      <p>No method of transmission or storage is completely secure, so while we strive to protect your information, we cannot guarantee absolute security.</p>
+    </section>
+
+    <section id="children">
+      <h2 class="sec">Children's privacy</h2>
+      <p>Grabbit is suitable for a general audience and may be enjoyed by children. We are committed to protecting the privacy of children in accordance with the U.S. Children's Online Privacy Protection Act (COPPA), the Google Play Families Policy, and similar regulations.</p>
+      <ul>
+        <li>We do <strong>not</strong> knowingly collect personal information — such as a real name, email, phone number, or precise location — from anyone, including children.</li>
+        <li>Advertising is limited to <strong>non-personalized ads</strong>, and we use ad configurations intended for child-directed treatment.</li>
+        <li>We do not enable social features, chat, or user-to-user communication.</li>
+      </ul>
+      <p>If you are a parent or guardian and believe your child has provided us with information you wish to have removed, please contact us at <a href="mailto:redmarblestudio@gmail.com">redmarblestudio@gmail.com</a> and we will promptly delete it.</p>
+    </section>
+
+    <section id="changes">
+      <h2 class="sec">Changes to this policy</h2>
+      <p>We may update this privacy policy from time to time to reflect changes to the game or to legal requirements. When we do, we will revise the "Last updated" date at the top of this page. Significant changes may also be communicated within the game or on the Google Play listing. Continued use of Grabbit after an update constitutes acceptance of the revised policy.</p>
+    </section>
+
+    <section id="contact">
+      <h2 class="sec">Contact us</h2>
+      <p>If you have questions about this privacy policy or about how your information is handled, or if you would like to make a data deletion request, please get in touch:</p>
+      <div class="contact-card">
+        <p class="who">Red Marble Studio</p>
+        <p><a href="mailto:redmarblestudio@gmail.com">redmarblestudio@gmail.com</a></p>
+        <p style="margin:0.6rem 0 0; color:var(--ink-soft); font-size:0.9rem;">We aim to respond to privacy requests within a reasonable time frame.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Red Marble Studio</span>
+    <span>Grabbit — Privacy Policy</span>
+  </footer>
+</div>
